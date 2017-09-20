@@ -1,10 +1,12 @@
 <template>
-  <div class="vm-flex" :class="clsObj">
+  <div class="vm-flex" :class="classNames">
     <slot></slot>
   </div>
 </template>
 
 <script>
+const prefixCls = 'vm-flex'
+
 export default {
   name: 'VFlex',
   props: {
@@ -16,30 +18,30 @@ export default {
   },
   data () {
     return {
-      clsObj: {
-        'vm-flex-direction-row': this.direction === 'row',
-        'vm-flex-direction-row-reverse': this.direction === 'row-reverse',
-        'vm-flex-direction-column': this.direction === 'column',
-        'vm-flex-direction-column-reverse': this.direction === 'column-reverse',
-        'vm-flex-nowrap': this.wrap === 'nowrap',
-        'vm-flex-wrap': this.wrap === 'wrap',
-        'vm-flex-wrap-reverse': this.wrap === 'wrap-reverse',
-        'vm-flex-justify-start': this.justify === 'start',
-        'vm-flex-justify-end': this.justify === 'end',
-        'vm-flex-justify-center': this.justify === 'center',
-        'vm-flex-justify-between': this.justify === 'between',
-        'vm-flex-justify-around': this.justify === 'around',
-        'vm-flex-align-start': this.align === 'start',
-        'vm-flex-align-center': this.align === 'center',
-        'vm-flex-align-end': this.align === 'end',
-        'vm-flex-align-baseline': this.align === 'baseline',
-        'vm-flex-align-stretch': this.align === 'stretch',
-        'vm-flex-align-content-start': this.alignContent === 'start',
-        'vm-flex-align-content-end': this.alignContent === 'end',
-        'vm-flex-align-content-center': this.alignContent === 'center',
-        'vm-flex-align-content-between': this.alignContent === 'between',
-        'vm-flex-align-content-around': this.alignContent === 'around',
-        'vm-flex-align-content-stretch': this.alignContent === 'stretch'
+      classNames: {
+        [`${prefixCls}-dir-row`]: this.direction === 'row',
+        [`${prefixCls}-dir-row-reverse`]: this.direction === 'row-reverse',
+        [`${prefixCls}-dir-column`]: this.direction === 'column',
+        [`${prefixCls}-dir-column-reverse`]: this.direction === 'column-reverse',
+        [`${prefixCls}-nowrap`]: this.wrap === 'nowrap',
+        [`${prefixCls}-wrap`]: this.wrap === 'wrap',
+        [`${prefixCls}-wrap-reverse`]: this.wrap === 'wrap-reverse',
+        [`${prefixCls}-justify-start`]: this.justify === 'start',
+        [`${prefixCls}-justify-end`]: this.justify === 'end',
+        [`${prefixCls}-justify-center`]: this.justify === 'center',
+        [`${prefixCls}-justify-between`]: this.justify === 'between',
+        [`${prefixCls}-justify-around`]: this.justify === 'around',
+        [`${prefixCls}-align-start`]: this.align === 'start',
+        [`${prefixCls}-align-center`]: this.align === 'center',
+        [`${prefixCls}-align-end`]: this.align === 'end',
+        [`${prefixCls}-align-baseline`]: this.align === 'baseline',
+        [`${prefixCls}-align-stretch`]: this.align === 'stretch',
+        [`${prefixCls}-align-content-start`]: this.alignContent === 'start',
+        [`${prefixCls}-align-content-end`]: this.alignContent === 'end',
+        [`${prefixCls}-align-content-center`]: this.alignContent === 'center',
+        [`${prefixCls}-align-content-between`]: this.alignContent === 'between',
+        [`${prefixCls}-align-content-around`]: this.alignContent === 'around',
+        [`${prefixCls}-align-content-stretch`]: this.alignContent === 'stretch'
       }
     }
   }
@@ -57,19 +59,19 @@ export default {
     overflow-y: hidden;
     text-align: left;
 
-    .vm-flex-direction-row {
+    &&-dir-row {
       flex-direction: row;
     }
 
-    &&-direction-row-reverse {
+    &&-dir-row-reverse {
       flex-direction: row-reverse;
     }
 
-    &&-direction-column {
+    &&-dir-column {
       flex-direction: column;
     }
 
-    &&-direction-column-reverse {
+    &&-dir-column-reverse {
       flex-direction: column-reverse;
     }
 
