@@ -4,6 +4,7 @@
     <ul>
       <li>
         <router-link to="/flex">flex</router-link>
+        <router-link to="/list">list</router-link>
       </li>
     </ul>
   </div>
