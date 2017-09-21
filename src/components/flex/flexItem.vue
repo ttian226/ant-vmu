@@ -27,7 +27,7 @@ export default {
       }
     }
 
-    &&-direction-row-reverse {
+    &&-dir-row-reverse {
       .@{flexPrefixCls}-item {
         &:first-child {
           margin-left: @h-spacing-md;
