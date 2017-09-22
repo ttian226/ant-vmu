@@ -66,7 +66,7 @@ export default {
     &&-dir-row-reverse {
       flex-direction: row-reverse;
     }
-
+    
     &&-dir-column {
       flex-direction: column;
     }
