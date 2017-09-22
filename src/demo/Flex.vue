@@ -79,13 +79,12 @@
 </template>
 
 <script>
-import VFlex from '@/components/flex/flex'
-import VFlexItem from '@/components/flex/flexItem'
+import VFlex from '@/components/flex'
 
 export default {
   components: {
     VFlex,
-    VFlexItem
+    VFlexItem: VFlex.Item
   }
 }
 </script>
@@ -118,7 +117,7 @@ export default {
       line-height: 40px;
     }
 
-    .vm-flex {
+    .vm-flexbox {
       margin-bottom: 15px;
     }
   }

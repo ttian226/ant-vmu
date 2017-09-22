@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 
 // demo
 import Flex from '@/demo/Flex'
+import Grid from '@/demo/Grid'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/flex',
       name: 'Flex',
       component: Flex
+    },
+    {
+      path: '/grid',
+      name: 'Grid',
+      component: Grid
     }
   ]
 })

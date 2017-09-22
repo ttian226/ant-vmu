@@ -1,11 +1,11 @@
 <template>
-  <div class="vm-flex" :class="classNames">
+  <div :class="classNames">
     <slot></slot>
   </div>
 </template>
 
 <script>
-const prefixCls = 'vm-flex'
+const prefixCls = 'vm-flexbox'
 
 export default {
   name: 'VFlex',
@@ -19,6 +19,7 @@ export default {
   data () {
     return {
       classNames: {
+        [prefixCls]: true,
         [`${prefixCls}-dir-row`]: this.direction === 'row',
         [`${prefixCls}-dir-row-reverse`]: this.direction === 'row-reverse',
         [`${prefixCls}-dir-column`]: this.direction === 'column',
@@ -51,7 +52,7 @@ export default {
 <style lang="less">
   @import '../../style/mixins';
   
-  @flexPrefixCls: vm-flex;
+  @flexPrefixCls: vm-flexbox;
 
   .@{flexPrefixCls} {
     display: flex;

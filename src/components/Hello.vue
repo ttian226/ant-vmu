@@ -5,6 +5,9 @@
       <li>
         <router-link to="/flex">flex</router-link>
       </li>
+      <li>
+        <router-link to="/grid">grid</router-link>
+      </li>
     </ul>
   </div>
 </template>
