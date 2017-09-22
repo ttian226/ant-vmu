@@ -3,8 +3,11 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 
 // demo
+import WhiteSpace from '@/demo/WhiteSpace'
+import Button from '@/demo/Button'
 import Flex from '@/demo/Flex'
 import Grid from '@/demo/Grid'
+import List from '@/demo/List'
 
 Vue.use(Router)
 
@@ -16,6 +19,16 @@ export default new Router({
       component: Hello
     },
     {
+      path: '/whitespace',
+      name: 'WhiteSpace',
+      component: WhiteSpace
+    },
+    {
+      path: '/button',
+      name: 'Button',
+      component: Button
+    },
+    {
       path: '/flex',
       name: 'Flex',
       component: Flex
@@ -24,6 +37,11 @@ export default new Router({
       path: '/grid',
       name: 'Grid',
       component: Grid
+    },
+    {
+      path: '/list',
+      name: 'List',
+      component: List
     }
   ]
 })
