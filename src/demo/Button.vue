@@ -1,32 +1,44 @@
 <template>
   <div class="demo-preview">
     <div class="demo-title">Button</div>
-    <div class="btn-container">
-      <v-button class="btn">default</v-button>      
-      <v-button class="btn" type="primary">primary button</v-button>
-      <v-button class="btn" disabled>disabled button</v-button>
-      <v-button class="btn" loading>(icon) loading button</v-button>
-
-      <div style="height: .16rem;" />
-
-      <p>inline / small</p>
-      <div class="demo-flexbox">
-        <v-button class="btn" type="primary" inline>inline</v-button>
-        <v-button class="btn" type="ghost" inline>inline</v-button>
-        <v-button class="btn" type="warning" inline>inline</v-button>
-      </div>
-      <div class="demo-flexbox">
+    <div class="demo-title">类型/尺寸</div>
+    <div class="demo-container">
+      <wing-blank>
+        <v-button class="btn">default</v-button>
+        <white-space size="sm"></white-space>     
+        <v-button class="btn" disabled>default disabled</v-button>
+        <white-space size="sm"></white-space>     
+        <v-button class="btn" type="primary">primary</v-button>
+        <white-space size="sm"></white-space> 
+        <v-button class="btn" type="primary" disabled>primary disabled</v-button>
+        <white-space size="sm"></white-space>    
+        <v-button class="btn" type="warning">warning</v-button>
+        <white-space size="sm"></white-space>
+        <v-button class="btn" type="warning" disabled>warning disabled</v-button>
+        <white-space size="sm"></white-space>        
+        <v-button class="btn" loading>(icon) loading button</v-button>
+        <white-space size="lg"></white-space>             
+        <v-button class="btn" type="primary" inline>inline primary</v-button>
+        <v-button class="btn" type="ghost" inline>inline ghost</v-button>
+        <white-space size="sm"></white-space>             
         <v-button class="btn" type="primary" inline size="small">inline small</v-button>
+        <v-button class="btn" type="primary" inline size="small" disabled>inline disabled</v-button>
         <v-button class="btn" type="ghost" inline size="small">inline small</v-button>
-        <v-button class="btn" type="warning" inline size="small">inline small</v-button>
-      </div>
+        <white-space size="sm"></white-space>             
+        <v-button class="btn" type="ghost" inline size="small">ghost small</v-button>        
+        <v-button class="btn" type="ghost" inline size="small" disabled>ghost disabled</v-button>        
+      </wing-blank>
     </div>
   </div>
 </template>
 <script>
+  import WingBlank from '@/components/WingBlank/WingBlank'
+  import WhiteSpace from '@/components/WhiteSpace/WhiteSpace'
   import VButton from '@/components/button/button'
   export default {
     components: {
+      WingBlank,
+      WhiteSpace,
       VButton
     }
   }
@@ -34,20 +46,7 @@
 
 <style lang="less">
   .demo-preview {
-    margin-left: 15px;
-    margin-right: 15px;
     margin-top: 15px;
-  }
-
-  .demo-title {
-    text-align: left;
-    padding: 15px 0 9px 15px;
-    color: #000;
-    font-size: 16px;
-    line-height: 16px;
-    height: 16px;
-    font-weight: bolder;
-    position: relative;
   }
 
   .demo-flexbox {

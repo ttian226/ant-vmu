@@ -1,17 +1,17 @@
 <template>
   <div class="demo-preview">
     <div class="demo-title">WingBlank</div>
-    <white-blank>
+    <wing-blank>
       <div class="demo-grid">Block</div>
-    </white-blank>
+    </wing-blank>
     <white-space></white-space>
-    <white-blank size="md">
+    <wing-blank size="md">
       <div class="demo-grid">Block</div>
-    </white-blank>
+    </wing-blank>
     <white-space></white-space>
-    <white-blank size="sm">
+    <wing-blank size="sm">
       <div class="demo-grid">Block</div>
-    </white-blank>
+    </wing-blank>
   </div>
 </template>
 
@@ -32,11 +32,11 @@
   }
 
   .demo-grid {
-    background-color: #ebebef;
-    color: #bbb;
+    background-color: rgb(235, 235, 239);
+    color: rgb(187, 187, 187);
     text-align: center;
-    height: 0.6rem;
-    line-height: 0.6rem;
+    height: 30px;
+    line-height: 30px;
     width: 100%;
   }
 </style>

@@ -30,21 +30,6 @@
     margin-top: 15px;
   }
 
-  .demo-title {
-    text-align: left;
-    padding: 15px 0 9px 15px;
-    color: #000;
-    font-size: 16px;
-    line-height: 16px;
-    height: 16px;
-    font-weight: bolder;
-    position: relative;
-  }
-
-  .demo-container {
-    padding: .18rem 0;
-  }
-
   .demo-grid {
     background-color: rgb(235, 235, 239);
     color: rgb(187, 187, 187);

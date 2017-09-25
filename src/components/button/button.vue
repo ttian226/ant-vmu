@@ -1,37 +1,41 @@
 <template>
-  <a class="vm-button" :disabled="disabled"
+  <button :disabled="disabled"
     @mousedown="click()"
     role="buttonType"
-    :class="[
-      type ? 'vm-button-' + type : '',
-      size ? 'vm-button-' + size : '',
-      {
-        'vm-button-disabled' : disabled,
-        'vm-button-loading' : loading,
-        'vm-button-inline' : inline,
-        'vm-button-active' : active
-      }
-    ]"
+    :class="classNames"
   >
     <!-- <i></i> -->
     <slot></slot>
-  </a>
+  </button>
 </template>
 
 <script>
+const prefixCls = 'vm-button'
+
 export default {
   name: 'VButton',
-  data () {
-    return {
-      active: false
-    }
-  },
   props: {
     type: String,
     size: String,
     disabled: Boolean,
     loading: Boolean,
     inline: Boolean
+  },
+  data () {
+    return {
+      active: false,
+      classNames: [
+        prefixCls,
+        this.type ? `${prefixCls}-` + this.type : '',
+        this.size ? `${prefixCls}-` + this.size : '',
+        {
+          [`${prefixCls}-disabled`]: this.disabled,
+          [`${prefixCls}-loading`]: this.loading,
+          [`${prefixCls}-inline`]: this.inline,
+          [`${prefixCls}-active`]: this.active
+        }
+      ]
+    }
   },
   methods: {
     click () {
@@ -56,20 +60,25 @@ export default {
     height: @button-height;
     line-height: @button-height;
     border-radius: @radius-md;
-
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-word;
     white-space: nowrap;
 
     // default
+    width: 100%;
     color: @color-text-base;
     background-color: @fill-base;
 
     .hairline('all', @border-color-base, @radius-md);
 
-    &&-active {
+    &:active {
       background-color: @fill-tap;
+    }
+
+    &&-disabled {
+      color: fade(@color-text-base, 30%);
+      opacity: 0.6;
     }
 
     &-primary {
@@ -77,7 +86,7 @@ export default {
       background-color: @primary-button-fill;
       .hairline('all', @primary-button-fill, @radius-md);
 
-      &.@{buttonPrefixCls}-active {
+      &:active {
         color: fade(@color-text-base-inverse, 30%);
         background-color: @primary-button-fill-tap;
       }
@@ -89,6 +98,7 @@ export default {
     }
 
     &-inline {
+      width: auto;
       display: inline-block;
       padding: 0 @h-spacing-lg;
     }
@@ -104,25 +114,33 @@ export default {
     &-ghost {
       color: @ghost-button-color;
       background-color: transparent;
-      border: @border-width-sm solid @ghost-button-color;
+      .hairline('all', @ghost-button-color, @radius-md);
 
-      &.@{buttonPrefixCls}-active {
-        color: @color-text-base-inverse;
-        background-color: @ghost-button-fill-tap;
-        border: @border-width-sm solid @ghost-button-color;
+      &:active {
+        color: @ghost-button-fill-tap;
+        background-color: transparent;
+        .hairline('all', @ghost-button-fill-tap, @radius-md);
+      }
+
+      &.@{buttonPrefixCls}-disabled {
+        color: fade(@color-text-base, 10%);
+        .hairline('all', fade(@color-text-base, 10%), @radius-md);
+        opacity: 1; // override default opacity: 0.6
       }
     }
 
     &-warning {
-      color: #f86e21;
-      background-color: @fill-base;
-    }
+      color: @color-text-base-inverse;
+      background-color: @warning-button-fill;
 
-    & {
+      &:active {
+        color: fade(@color-text-base-inverse, 30%);
+        background-color: @warning-button-fill-tap;
+      }
+
       &.@{buttonPrefixCls}-disabled {
-        color: @color-text-disabled;
-        background-color: @fill-disabled;
-        border: 0;
+        color: fade(@color-text-base-inverse, 60%);
+        opacity: 0.4;
       }
     }
   }
