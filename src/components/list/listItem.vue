@@ -1,21 +1,29 @@
 <template>
-  <div class="vm-list-item">
-    <div class="vm-list-line">
-      <div class="vm-list-content">
+  <div :class="`${classNames}-item`">
+    <div :class="`${classNames}-line`">
+      <div :class="`${classNames}-content`">
         <slot></slot>
       </div>
-      <div class="vm-list-extra">{{extra}}</div>
+      <div :class="`${classNames}-extra`" v-if="extra">{{extra}}</div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'VListItem',
-    props: {
-      extra: String
+const prefixCls = 'vm-list'
+
+export default {
+  name: 'VListItem',
+  props: {
+    extra: String,
+    default: ''
+  },
+  data () {
+    return {
+      classNames: prefixCls
     }
   }
+}
 </script>
 
 <style lang="less">

@@ -1,15 +1,29 @@
 <template>
-  <div class="vm-list">
-    <div class="vm-list-body">
+  <div :class="classNames">
+    <div :class="`${classNames}-header`" v-if="header">{{header}}</div>
+    <div :class="`${classNames}-body`">
       <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'VList'
+const prefixCls = 'vm-list'
+
+export default {
+  name: 'VList',
+  props: {
+    header: {
+      type: String,
+      default: ''
+    }
+  },
+  data () {
+    return {
+      classNames: prefixCls
+    }
   }
+}
 </script>
 
 <style lang="less">

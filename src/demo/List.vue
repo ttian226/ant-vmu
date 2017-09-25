@@ -1,7 +1,9 @@
 <template>
   <div class="demo-preview">
     <div class="demo-title">List</div>
-    <div class="sub-title">Basic Style</div>
+    <v-list>
+      <v-list-item>Title</v-list-item>
+    </v-list>
     <v-list>
       <v-list-item extra="extra content">Title</v-list-item>
     </v-list>
