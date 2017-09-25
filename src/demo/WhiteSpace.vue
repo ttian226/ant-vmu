@@ -1,6 +1,6 @@
 <template>
   <div class="demo-preview">
-    <div class="demo-title">Button</div>
+    <div class="demo-title">WhiteSpace</div>
     <div class="demo-container">
       <white-space size="xs"></white-space>
       <div class="demo-grid">Block</div>
