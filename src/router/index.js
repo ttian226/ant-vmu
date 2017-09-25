@@ -7,6 +7,7 @@ import WingBlank from '@/demo/WingBlank'
 import WhiteSpace from '@/demo/WhiteSpace'
 import Button from '@/demo/Button'
 import Flex from '@/demo/Flex'
+import Grid from '@/demo/Grid'
 import List from '@/demo/List'
 
 Vue.use(Router)
@@ -37,6 +38,11 @@ export default new Router({
       path: '/flex',
       name: 'Flex',
       component: Flex
+    },
+    {
+      path: '/grid',
+      name: 'Grid',
+      component: Grid
     },
     {
       path: '/list',

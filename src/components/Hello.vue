@@ -9,6 +9,9 @@
         <router-link to="/flex">flex</router-link>
         <router-link to="/list">list</router-link>
       </li>
+      <li>
+        <router-link to="/grid">grid</router-link>
+      </li>
     </ul>
   </div>
 </template>
