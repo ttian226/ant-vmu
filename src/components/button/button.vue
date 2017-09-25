@@ -23,17 +23,15 @@ export default {
   data () {
     return {
       active: false,
-      classNames: [
-        prefixCls,
-        this.type ? `${prefixCls}-` + this.type : '',
-        this.size ? `${prefixCls}-` + this.size : '',
-        {
-          [`${prefixCls}-disabled`]: this.disabled,
-          [`${prefixCls}-loading`]: this.loading,
-          [`${prefixCls}-inline`]: this.inline,
-          [`${prefixCls}-active`]: this.active
-        }
-      ]
+      classNames: {
+        [`${prefixCls}`]: true,
+        [`${prefixCls}-${this.type}`]: this.type,
+        [`${prefixCls}-${this.size}`]: this.size,
+        [`${prefixCls}-disabled`]: this.disabled,
+        [`${prefixCls}-loading`]: this.loading,
+        [`${prefixCls}-inline`]: this.inline,
+        [`${prefixCls}-active`]: this.active
+      }
     }
   }
 }

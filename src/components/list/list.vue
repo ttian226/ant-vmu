@@ -8,8 +8,6 @@
 </template>
 
 <script>
-const prefixCls = 'vm-list'
-
 export default {
   name: 'VList',
   props: {
@@ -20,7 +18,7 @@ export default {
   },
   data () {
     return {
-      classNames: prefixCls
+      classNames: 'vm-list'
     }
   }
 }
@@ -32,6 +30,15 @@ export default {
   @listPrefixCls: vm-list;
 
   .@{listPrefixCls} {
+    &-header {
+      padding: @v-spacing-lg @h-spacing-lg @v-spacing-md @h-spacing-lg;
+      font-size: @font-size-base;
+      color: @color-text-caption;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
     &-body {
       position: relative;
       background-color: @fill-base;

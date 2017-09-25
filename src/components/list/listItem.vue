@@ -1,10 +1,10 @@
 <template>
-  <div :class="`${classNames}-item`">
-    <div :class="`${classNames}-line`">
-      <div :class="`${classNames}-content`">
+  <div :class="wrapCls">
+    <div :class="lineCls">
+      <div :class="contentCls">
         <slot></slot>
       </div>
-      <div :class="`${classNames}-extra`" v-if="extra">{{extra}}</div>
+      <div :class="extraCls" v-if="extra">{{extra}}</div>
     </div>
   </div>
 </template>
@@ -15,12 +15,21 @@ const prefixCls = 'vm-list'
 export default {
   name: 'VListItem',
   props: {
-    extra: String,
-    default: ''
+    extra: {
+      type: String,
+      default: ''
+    },
+    multipleLine: Boolean
   },
   data () {
     return {
-      classNames: prefixCls
+      wrapCls: `${prefixCls}-item`,
+      contentCls: `${prefixCls}-content`,
+      extraCls: `${prefixCls}-extra`,
+      lineCls: {
+        [`${prefixCls}-line`]: true,
+        [`${prefixCls}-line-multiple`]: this.multipleLine
+      }
     }
   }
 }
@@ -70,6 +79,10 @@ export default {
         line-height: @line-height-paragraph;
         text-align: right;
         .ellipsis();
+      }
+
+      &-multiple {
+        padding: 12.5 * @hd @h-spacing-lg 12.5 * @hd 0;
       }
     }
   }
