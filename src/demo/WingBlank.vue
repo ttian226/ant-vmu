@@ -1,17 +1,19 @@
 <template>
   <div class="demo-preview">
     <div class="demo-title">WingBlank</div>
-    <wing-blank>
-      <div class="demo-grid">Block</div>
-    </wing-blank>
-    <white-space></white-space>
-    <wing-blank size="md">
-      <div class="demo-grid">Block</div>
-    </wing-blank>
-    <white-space></white-space>
-    <wing-blank size="sm">
-      <div class="demo-grid">Block</div>
-    </wing-blank>
+    <div class="demo-container">
+      <wing-blank>
+        <div class="demo-grid">Block</div>
+      </wing-blank>
+      <white-space></white-space>
+      <wing-blank size="md">
+        <div class="demo-grid">Block</div>
+      </wing-blank>
+      <white-space></white-space>
+      <wing-blank size="sm">
+        <div class="demo-grid">Block</div>
+      </wing-blank>
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
   <button :disabled="disabled"
-    @mousedown="click()"
     role="buttonType"
     :class="classNames"
   >
@@ -35,11 +34,6 @@ export default {
           [`${prefixCls}-active`]: this.active
         }
       ]
-    }
-  },
-  methods: {
-    click () {
-      console.log('click button successfully')
     }
   }
 }

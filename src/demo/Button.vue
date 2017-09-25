@@ -7,24 +7,30 @@
         <v-button class="btn">default</v-button>
         <white-space size="sm"></white-space>     
         <v-button class="btn" disabled>default disabled</v-button>
-        <white-space size="sm"></white-space>     
+        <white-space size="sm"></white-space> 
+
         <v-button class="btn" type="primary">primary</v-button>
         <white-space size="sm"></white-space> 
         <v-button class="btn" type="primary" disabled>primary disabled</v-button>
-        <white-space size="sm"></white-space>    
+        <white-space size="sm"></white-space>   
+
         <v-button class="btn" type="warning">warning</v-button>
         <white-space size="sm"></white-space>
         <v-button class="btn" type="warning" disabled>warning disabled</v-button>
-        <white-space size="sm"></white-space>        
+        <white-space size="sm"></white-space>
+
         <v-button class="btn" loading>(icon) loading button</v-button>
-        <white-space size="lg"></white-space>             
+        <white-space size="lg"></white-space>
+
         <v-button class="btn" type="primary" inline>inline primary</v-button>
         <v-button class="btn" type="ghost" inline>inline ghost</v-button>
-        <white-space size="sm"></white-space>             
+        <white-space size="sm"></white-space>
+
         <v-button class="btn" type="primary" inline size="small">inline small</v-button>
         <v-button class="btn" type="primary" inline size="small" disabled>inline disabled</v-button>
         <v-button class="btn" type="ghost" inline size="small">inline small</v-button>
-        <white-space size="sm"></white-space>             
+        <white-space size="sm"></white-space>
+                     
         <v-button class="btn" type="ghost" inline size="small">ghost small</v-button>        
         <v-button class="btn" type="ghost" inline size="small" disabled>ghost disabled</v-button>        
       </wing-blank>
