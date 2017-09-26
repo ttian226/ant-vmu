@@ -85,13 +85,23 @@
         <v-brief>subtitle</v-brief>
       </v-list-item>
     </v-list>
+
+    <v-list header="Text Wrapping">
+      <v-list-item>
+        Single line，long text will be hidden with ellipsis；
+      </v-list-item>
+      <v-list-item wrap>
+        Multiple line，long text will wrap；Long Text Long Text Long Text Long Text Long Text Long Text
+      </v-list-item>
+    </v-list>
+    <white-space></white-space>
   </div>
 </template>
 
 <script>
 import VList from '@/components/list/list'
 import VListItem from '@/components/list/listItem'
-import WhiteSpace from '@/components/whiteSpace/whiteSpace'
+import WhiteSpace from '@/components/whitespace/whitespace'
 import VBrief from '@/components/list/brief'
 
 export default {

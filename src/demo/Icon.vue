@@ -1,5 +1,5 @@
 <template>
-  <icon type="check"></icon>
+  <icon type="check" size="lg"></icon>
 </template>
 
 <script>

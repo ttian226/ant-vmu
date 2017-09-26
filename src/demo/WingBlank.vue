@@ -19,7 +19,7 @@
 
 <script>
   import WingBlank from '@/components/WingBlank/WingBlank'
-  import WhiteSpace from '@/components/WhiteSpace/WhiteSpace'
+  import WhiteSpace from '@/components/whitespace/whitespace'
   export default {
     components: {
       WingBlank,
