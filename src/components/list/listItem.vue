@@ -36,7 +36,8 @@
         default: 'middle'
       },
       click: Boolean,
-      multipleLine: Boolean
+      multipleLine: Boolean,
+      wrap: Boolean
     },
     data () {
       return {
@@ -56,7 +57,8 @@
       lineCls () {
         return {
           [`${prefixCls}-line`]: true,
-          [`${prefixCls}-line-multiple`]: this.multipleLine
+          [`${prefixCls}-line-multiple`]: this.multipleLine,
+          [`${prefixCls}-line-wrap`]: this.wrap
         }
       },
       arrowCls () {
@@ -148,6 +150,9 @@
             line-height: @line-height-paragraph;
             text-align: left;
             .ellipsis();
+
+            padding-top: 7 * @hd;
+            padding-bottom: 7 * @hd;
           }
 
           .@{listPrefixCls}-extra {
@@ -161,6 +166,12 @@
 
           &-multiple {
             padding: 12.5 * @hd @h-spacing-lg 12.5 * @hd 0;
+          }
+
+          &-wrap {
+            .@{listPrefixCls}-content {
+              white-space: normal;
+            }
           }
 
           /* list右侧箭头 */

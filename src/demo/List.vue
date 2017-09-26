@@ -85,6 +85,16 @@
         <v-brief>subtitle</v-brief>
       </v-list-item>
     </v-list>
+
+    <v-list header="Text Wrapping">
+      <v-list-item>
+        Single line，long text will be hidden with ellipsis；
+      </v-list-item>
+      <v-list-item wrap>
+        Multiple line，long text will wrap；Long Text Long Text Long Text Long Text Long Text Long Text
+      </v-list-item>
+    </v-list>
+    <white-space></white-space>
   </div>
 </template>
 
