@@ -101,7 +101,7 @@
 <script>
 import VList from '@/components/list/list'
 import VListItem from '@/components/list/listItem'
-import WhiteSpace from '@/components/whiteSpace/whiteSpace'
+import WhiteSpace from '@/components/whitespace/whitespace'
 import VBrief from '@/components/list/brief'
 
 export default {
