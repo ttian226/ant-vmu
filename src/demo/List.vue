@@ -4,13 +4,83 @@
     <v-list header="Basic Style">
       <v-list-item>Title</v-list-item>
     </v-list>
-    <white-space size="lg"></white-space>
+    <white-space></white-space>
     <v-list>
       <v-list-item extra="extra content">Title Content</v-list-item>
     </v-list>
 
     <v-list header="subTitle">
-      <v-list-item multipleLine>
+      <v-list-item multipleLine arrow="horizontal">
+        Title
+        <v-brief>subtitle</v-brief>
+      </v-list-item>
+    </v-list>
+
+    <v-list header="Customized Right Side（Empty Content / Text / Image）">
+      <v-list-item>Title</v-list-item>
+      <v-list-item arrow="horizontal" click>Title</v-list-item>
+      <v-list-item extra="extra content" arrow="horizontal" click>Title</v-list-item>
+      <v-list-item 
+        extra="what?" 
+        arrow="horizontal" 
+        multipleLine
+        align="top"
+      >
+        Title
+        <v-brief>subtitle</v-brief>
+      </v-list-item>
+      <v-list-item 
+        extra="default" 
+        arrow="horizontal" 
+        multipleLine
+      >
+        Title
+        <v-brief>subtitle</v-brief>
+      </v-list-item>
+      <v-list-item 
+        extra="PM 09:00" 
+        arrow="horizontal" 
+        multipleLine
+        align="bottom"
+      >
+        Title
+        <v-brief>subtitle</v-brief>
+      </v-list-item>
+    </v-list>
+
+    <v-list header="Icon in the left">
+      <v-list-item
+        click
+        arrow="horizontal"
+        thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+      >
+        Title
+      </v-list-item>
+      <v-list-item
+        click
+        arrow="horizontal"
+        thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png"
+      >
+        Title
+      </v-list-item>
+    </v-list>
+    <white-space></white-space>
+    <v-list>
+      <v-list-item
+        click
+        multipleLine 
+        arrow="horizontal"
+        thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
+      >
+        Title
+        <v-brief>subtitle</v-brief>
+      </v-list-item>
+      <v-list-item
+        click 
+        multipleLine
+        arrow="horizontal"
+        thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png"
+      >
         Title
         <v-brief>subtitle</v-brief>
       </v-list-item>

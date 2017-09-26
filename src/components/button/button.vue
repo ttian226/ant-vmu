@@ -4,7 +4,7 @@
     :class="classNames"
   >
     <!-- <i></i> -->
-    <slot></slot>
+    <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
 
