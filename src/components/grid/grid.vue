@@ -1,7 +1,7 @@
 <template>
   <div :class="wrapCls">
     <v-flex justify="center" align="stretch" v-for="(row, rowIndex) in rowNum" :key="rowIndex">
-      <v-flex-item v-for="(item, colIndex) in items.slice(rowIndex * columnNum, rowIndex * columnNum + columnNum)" :key="colIndex" :class="`${prefixCls}-item`">
+      <v-flex-item v-for="(item, colIndex) in items.slice(rowIndex * columnNum, rowIndex * columnNum + columnNum)" :key="colIndex" :class="`${prefixCls}-item`" :style="colStyle">
         <div v-if="item" :class="`${prefixCls}-item-content`" @click="clickGridItem(item, rowIndex * columnNum + colIndex)">
           <div v-if="!renderItem" :class="`${prefixCls}-item-inner-content column-num-${columnNum}`">
             <img :class="`${prefixCls}-icon`" :src="item.icon">
@@ -48,6 +48,9 @@ export default {
         [prefixCls]: true,
         [`${prefixCls}-square`]: this.square,
         [`${prefixCls}-line`]: this.hasLine
+      },
+      colStyle: {
+        width: `${100 / this.columnNum}%`
       }
     }
   },

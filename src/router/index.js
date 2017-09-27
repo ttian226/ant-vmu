@@ -9,6 +9,7 @@ import Button from '@/demo/Button'
 import Flex from '@/demo/Flex'
 import Grid from '@/demo/Grid'
 import List from '@/demo/List'
+import Icon from '@/demo/Icon'
 import Input from '@/demo/Input'
 
 Vue.use(Router)
@@ -49,6 +50,11 @@ export default new Router({
       path: '/list',
       name: 'List',
       component: List
+    },
+    {
+      path: '/icon',
+      name: 'Icon',
+      component: Icon
     },
     {
       path: '/input',
