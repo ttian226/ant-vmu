@@ -16,6 +16,7 @@
     <p>Data Entry</p>
     <ul>
       <li><router-link to="/button">button</router-link></li>
+      <li><router-link to="/input">input</router-link></li>
     </ul>
   </div>
 </template>
