@@ -1,15 +1,19 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>Basic</p>
+    <p>Layout</p>
     <ul>
+      <li><router-link to="/flex">flex</router-link></li>
       <li><router-link to="/whitespace">white-space</router-link></li>
       <li><router-link to="/wingblank">wing-blank</router-link></li>
-      <li><router-link to="/flex">flex</router-link></li>
+    </ul>
+    <p>Data Display</p>
+    <ul>
       <li><router-link to="/list">list</router-link></li>
       <li><router-link to="/grid">grid</router-link></li>
+      <li><router-link to="/icon">icon</router-link></li>
     </ul>
-    <p>Form</p>
+    <p>Data Entry</p>
     <ul>
       <li><router-link to="/button">button</router-link></li>
     </ul>

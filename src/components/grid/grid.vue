@@ -4,7 +4,8 @@
       <v-flex-item v-for="(item, colIndex) in items.slice(rowIndex * columnNum, rowIndex * columnNum + columnNum)" :key="colIndex" :class="`${prefixCls}-item`" :style="colStyle">
         <div v-if="item" :class="`${prefixCls}-item-content`" @click="clickGridItem(item, rowIndex * columnNum + colIndex)">
           <div v-if="!renderItem" :class="`${prefixCls}-item-inner-content column-num-${columnNum}`">
-            <img :class="`${prefixCls}-icon`" :src="item.icon">
+            <icon v-if="item.svg" :type="item.svg.type" :size="item.svg.size"/>
+            <img v-else :class="`${prefixCls}-icon`" :src="item.icon">
             <div :class="`${prefixCls}-text`">{{ item.text }}</div>
           </div>
           <div v-else v-html="renderItem(item)"></div>
@@ -16,6 +17,7 @@
 
 <script>
 import VFlex from '../flex'
+import Icon from '../icon'
 
 const prefixCls = 'vm-grid'
 
@@ -23,7 +25,8 @@ export default {
   name: 'VGrid',
   components: {
     VFlex,
-    VFlexItem: VFlex.Item
+    VFlexItem: VFlex.Item,
+    Icon
   },
   props: {
     data: Array,

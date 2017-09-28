@@ -1,13 +1,13 @@
 <template>
   <div class="grid-demo">
-    <div class="sub-title">always square grid item</div>
-    <v-grid :data="data"></v-grid>
+    <div class="sub-title">no border</div>
+    <v-grid :data="data" :hasLine="false"></v-grid>
     <div class="sub-title">grid item adjust accroiding to img size</div>
     <v-grid :data="data" :square="false" class="not-square-grid"></v-grid>
     <div class="sub-title">columnNum=3</div>
-    <v-grid :data="data" :columnNum="3"></v-grid>
-    <div class="sub-title">no border</div>
-    <v-grid :data="data" :hasLine="false"></v-grid>
+    <v-grid :data="data" :columnNum="3" @onClick="clickEvent"></v-grid>
+    <div class="sub-title">always square grid item</div>
+    <v-grid :data="data"></v-grid>
     <div class="sub-title">custom content</div>
     <v-grid :data="data" :columnNum="3" :renderItem="customerItem"></v-grid>
   </div>
