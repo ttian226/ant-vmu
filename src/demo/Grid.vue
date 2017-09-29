@@ -29,8 +29,8 @@ export default {
     }
   },
   methods: {
-    clickEvent (el, index) {
-      console.log(el, index)
+    clickEvent (item, index) {
+      console.log(item, index)
     },
     customerItem (item) {
       return `

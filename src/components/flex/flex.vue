@@ -13,7 +13,10 @@ export default {
     direction: String,
     wrap: String,
     justify: String,
-    align: String,
+    align: {
+      type: String,
+      default: 'center'
+    },
     alignContent: String
   },
   data () {
