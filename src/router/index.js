@@ -4,7 +4,7 @@ import Hello from '@/components/Hello'
 
 // demo
 import WingBlank from '@/demo/WingBlank'
-// import WhiteSpace from '@/demo/WhiteSpace'
+import WhiteSpace from '@/demo/WhiteSpace'
 import Button from '@/demo/Button'
 import Flex from '@/demo/Flex'
 import Grid from '@/demo/Grid'
@@ -26,11 +26,11 @@ export default new Router({
       name: 'WingBlank',
       component: WingBlank
     },
-    // {
-    //   path: '/whitespace',
-    //   name: 'WhiteSpace',
-    //   component: WhiteSpace
-    // },
+    {
+      path: '/whitespace',
+      name: 'WhiteSpace',
+      component: WhiteSpace
+    },
     {
       path: '/button',
       name: 'Button',

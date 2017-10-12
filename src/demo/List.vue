@@ -20,26 +20,26 @@
       <v-list-item>Title</v-list-item>
       <v-list-item arrow="horizontal" click>Title</v-list-item>
       <v-list-item extra="extra content" arrow="horizontal" click>Title</v-list-item>
-      <v-list-item 
-        extra="what?" 
-        arrow="horizontal" 
+      <v-list-item
+        extra="what?"
+        arrow="horizontal"
         multipleLine
         align="top"
       >
         Title
         <v-brief>subtitle</v-brief>
       </v-list-item>
-      <v-list-item 
-        extra="default" 
-        arrow="horizontal" 
+      <v-list-item
+        extra="default"
+        arrow="horizontal"
         multipleLine
       >
         Title
         <v-brief>subtitle</v-brief>
       </v-list-item>
-      <v-list-item 
-        extra="PM 09:00" 
-        arrow="horizontal" 
+      <v-list-item
+        extra="PM 09:00"
+        arrow="horizontal"
         multipleLine
         align="bottom"
       >
@@ -68,7 +68,7 @@
     <v-list>
       <v-list-item
         click
-        multipleLine 
+        multipleLine
         arrow="horizontal"
         thumb="https://zos.alipayobjects.com/rmsportal/dNuvNrtqUztHCwM.png"
       >
@@ -76,7 +76,7 @@
         <v-brief>subtitle</v-brief>
       </v-list-item>
       <v-list-item
-        click 
+        click
         multipleLine
         arrow="horizontal"
         thumb="https://zos.alipayobjects.com/rmsportal/UmbJMbWOejVOpxe.png"
@@ -99,17 +99,15 @@
 </template>
 
 <script>
-import VList from '@/components/list/list'
-import VListItem from '@/components/list/listItem'
-import WhiteSpace from '@/components/whitespace/whitespace'
-import VBrief from '@/components/list/brief'
+import VList from '@/components/list'
+import WhiteSpace from '@/components/whitespace'
 
 export default {
   components: {
-    VList,
-    VListItem,
     WhiteSpace,
-    VBrief
+    VList,
+    VListItem: VList.Item,
+    VBrief: VList.Brief
   }
 }
 </script>

@@ -5,14 +5,14 @@
     <div class="demo-container">
       <wing-blank>
         <v-button class="btn">default</v-button>
-        <white-space size="sm"></white-space>     
+        <white-space size="sm"></white-space>
         <v-button class="btn" disabled>default disabled</v-button>
-        <white-space size="sm"></white-space> 
+        <white-space size="sm"></white-space>
 
         <v-button class="btn" type="primary">primary</v-button>
-        <white-space size="sm"></white-space> 
+        <white-space size="sm"></white-space>
         <v-button class="btn" type="primary" disabled>primary disabled</v-button>
-        <white-space size="sm"></white-space>   
+        <white-space size="sm"></white-space>
 
         <v-button class="btn" type="warning">warning</v-button>
         <white-space size="sm"></white-space>
@@ -30,17 +30,17 @@
         <v-button class="btn" type="primary" inline size="small" disabled>inline disabled</v-button>
         <v-button class="btn" type="ghost" inline size="small">inline small</v-button>
         <white-space size="sm"></white-space>
-                     
-        <v-button class="btn" type="ghost" inline size="small">ghost small</v-button>        
-        <v-button class="btn" type="ghost" inline size="small" disabled>ghost disabled</v-button>        
+
+        <v-button class="btn" type="ghost" inline size="small">ghost small</v-button>
+        <v-button class="btn" type="ghost" inline size="small" disabled>ghost disabled</v-button>
       </wing-blank>
     </div>
   </div>
 </template>
 <script>
-  import WingBlank from '@/components/WingBlank/WingBlank'
-  import WhiteSpace from '@/components/whitespace/whitespace'
-  import VButton from '@/components/button/button'
+  import WingBlank from '@/components/wingblank'
+  import WhiteSpace from '@/components/whitespace'
+  import VButton from '@/components/button'
   export default {
     components: {
       WingBlank,

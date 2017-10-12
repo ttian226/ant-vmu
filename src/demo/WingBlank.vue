@@ -18,8 +18,8 @@
 </template>
 
 <script>
-  import WingBlank from '@/components/WingBlank/WingBlank'
-  import WhiteSpace from '@/components/whitespace/whitespace'
+  import WingBlank from '@/components/wingblank'
+  import WhiteSpace from '@/components/whitespace'
   export default {
     components: {
       WingBlank,

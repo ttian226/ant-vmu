@@ -17,7 +17,7 @@
 </template>
 
 <script>
-  import WhiteSpace from '@/components/whitespace/whitespace'
+  import WhiteSpace from '@/components/whitespace'
   export default {
     components: {
       WhiteSpace

@@ -17,7 +17,16 @@ html, body {
   font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial;
 }
 
+html {
+  line-height: 1.15;
+}
+
 body {
+  margin: 0;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
   margin: 0;
 }
 
