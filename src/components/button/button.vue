@@ -3,7 +3,6 @@
     role="buttonType"
     :class="classNames"
   >
-    <!-- <i></i> -->
     <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
@@ -24,7 +23,7 @@ export default {
     return {
       active: false,
       classNames: {
-        [`${prefixCls}`]: true,
+        [prefixCls]: true,
         [`${prefixCls}-${this.type}`]: this.type,
         [`${prefixCls}-${this.size}`]: this.size,
         [`${prefixCls}-disabled`]: this.disabled,

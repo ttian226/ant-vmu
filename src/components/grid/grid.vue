@@ -1,8 +1,24 @@
 <template>
   <div :class="wrapCls">
-    <v-flex justify="center" align="stretch" v-for="(row, rowIndex) in rowNum" :key="rowIndex">
-      <v-flex-item v-for="(item, colIndex) in items.slice(rowIndex * columnNum, rowIndex * columnNum + columnNum)" :key="colIndex" :class="`${prefixCls}-item`" :style="colStyle">
-        <div v-if="item" :class="`${prefixCls}-item-content`" @click="clickGridItem(item, rowIndex * columnNum + colIndex)">
+    <v-flex 
+      justify="center" 
+      align="stretch" 
+      v-for="(row, rowIndex) in rowNum" 
+      :key="rowIndex"
+    >
+      <v-flex-item 
+        v-for="(item, colIndex) in items.slice(rowIndex * columnNum, rowIndex * columnNum + columnNum)" 
+        :key="colIndex" 
+        :class="`${prefixCls}-item`" 
+        :style="colStyle"
+      >
+        <div 
+          v-if="item" 
+          :class="`${prefixCls}-item-content`" 
+          @click="clickGridItem(item, rowIndex * columnNum + colIndex)" 
+          @touchstart="touchstart($event.currentTarget)" 
+          @touchend="touchend($event.currentTarget)"
+        >
           <div v-if="!renderItem" :class="`${prefixCls}-item-inner-content column-num-${columnNum}`">
             <icon v-if="item.svg" :type="item.svg.type" :size="item.svg.size"/>
             <img v-else :class="`${prefixCls}-icon`" :src="item.icon">
@@ -69,6 +85,12 @@ export default {
   methods: {
     clickGridItem (item, index) {
       this.$emit('onClick', item, index)
+    },
+    touchstart (el) {
+      el.className += ` ${this.prefixCls}-item-content-active`
+    },
+    touchend (el) {
+      el.classList.remove(`${this.prefixCls}-item-content-active`)
     }
   }
 }
@@ -93,17 +115,15 @@ export default {
           position: relative;
         }
 
-        &.@{gridPrefixCls}-item-active {
-          .@{gridPrefixCls}-item-content {
-            background-color: @fill-tap;
-          }
-        }
-
         .@{gridPrefixCls}-item-content {
           text-align: center;
           width: 100%;
           height: 100%;
           padding: @v-spacing-lg 0;
+
+          &.@{gridPrefixCls}-item-content-active {
+            background-color: @fill-tap;
+          }
 
           .@{gridPrefixCls}-item-inner-content {
             display: flex;
