@@ -22,7 +22,8 @@
       <v-input v-model="input5" disabled>标题</v-input>
     </v-list>
     <v-list header="Format">
-      <v-input v-model="input6" type="number">数字键盘</v-input>
+      <v-input placeholder="click to show number keyboard" v-model="input6" type="number">数字键盘</v-input>
+      <v-input placeholder="****" v-model="input7" type="password">密码</v-input>
     </v-list>
   </div>
 </template>
