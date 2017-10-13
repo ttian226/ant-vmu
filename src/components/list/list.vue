@@ -1,7 +1,7 @@
 <template>
-  <div :class="classNames">
-    <div :class="`${classNames}-header`" v-if="header">{{header}}</div>
-    <div :class="`${classNames}-body`">
+  <div :class="listCls">
+    <div :class="`${listCls}-header`" v-if="header">{{header}}</div>
+    <div :class="`${listCls}-body`">
       <slot></slot>
     </div>
   </div>
@@ -18,7 +18,7 @@ export default {
   },
   data () {
     return {
-      classNames: 'vm-list'
+      listCls: 'vm-list'
     }
   }
 }
