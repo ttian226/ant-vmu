@@ -16,8 +16,6 @@
           v-if="item" 
           :class="`${prefixCls}-item-content`" 
           @click="clickGridItem(item, rowIndex * columnNum + colIndex)" 
-          @touchstart="touchstart($event.currentTarget)" 
-          @touchend="touchend($event.currentTarget)"
         >
           <div v-if="!renderItem" :class="`${prefixCls}-item-inner-content column-num-${columnNum}`">
             <icon v-if="item.svg" :type="item.svg.type" :size="item.svg.size"/>
@@ -85,12 +83,6 @@ export default {
   methods: {
     clickGridItem (item, index) {
       this.$emit('onClick', item, index)
-    },
-    touchstart (el) {
-      el.className += ` ${this.prefixCls}-item-content-active`
-    },
-    touchend (el) {
-      el.classList.remove(`${this.prefixCls}-item-content-active`)
     }
   }
 }
@@ -121,7 +113,7 @@ export default {
           height: 100%;
           padding: @v-spacing-lg 0;
 
-          &.@{gridPrefixCls}-item-content-active {
+          &:active {
             background-color: @fill-tap;
           }
 
