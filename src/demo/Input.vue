@@ -42,6 +42,8 @@ export default {
       input3: '',
       input4: 'Not editable',
       input5: 'disabled',
+      input6: '',
+      input7: '',
       clickToFocus: false
     }
   },
