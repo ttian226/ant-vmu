@@ -1,5 +1,5 @@
 <template>
-  <div :class="`${classNames}-brief`">
+  <div :class="`${briefCls}-brief`">
     <slot></slot>
   </div>
 </template>
@@ -9,7 +9,7 @@ export default {
   name: 'VBrief',
   data () {
     return {
-      classNames: 'vm-list'
+      briefCls: 'vm-list'
     }
   }
 }

@@ -3,25 +3,31 @@
     role="buttonType"
     :class="classNames"
   >
+    <Icon :class="`${prefixCls}-icon`" type="loading" v-if="loading"></Icon>
+    <Icon :class="`${prefixCls}-icon`" :type="icon" v-if="icon && !loading"></Icon>
     <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
 
 <script>
+import Icon from '../icon'
 const prefixCls = 'vm-button'
 
 export default {
   name: 'VButton',
+  components: { Icon },
   props: {
     type: String,
     size: String,
     disabled: Boolean,
     loading: Boolean,
-    inline: Boolean
+    inline: Boolean,
+    icon: String
   },
   data () {
     return {
       active: false,
+      prefixCls: prefixCls,
       classNames: {
         [prefixCls]: true,
         [`${prefixCls}-${this.type}`]: this.type,
@@ -29,7 +35,8 @@ export default {
         [`${prefixCls}-disabled`]: this.disabled,
         [`${prefixCls}-loading`]: this.loading,
         [`${prefixCls}-inline`]: this.inline,
-        [`${prefixCls}-active`]: this.active
+        [`${prefixCls}-active`]: this.active,
+        [`${prefixCls}-icon`]: this.loading ? 'loading' : this.icon
       }
     }
   }
@@ -133,6 +140,16 @@ export default {
         color: fade(@color-text-base-inverse, 60%);
         opacity: 0.4;
       }
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    > .@{buttonPrefixCls}-icon {
+      margin-right: 0.5em;
     }
   }
 </style>

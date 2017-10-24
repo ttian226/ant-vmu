@@ -11,6 +11,7 @@ import Grid from '@/demo/Grid'
 import List from '@/demo/List'
 import Icon from '@/demo/Icon'
 import Input from '@/demo/Input'
+import Radio from '@/demo/Radio'
 
 Vue.use(Router)
 
@@ -60,6 +61,11 @@ export default new Router({
       path: '/input',
       name: 'Input',
       component: Input
+    },
+    {
+      path: '/radio',
+      name: 'Radio',
+      component: Radio
     }
   ]
 })

@@ -7,6 +7,7 @@
         :placeholder="placeholder"
         ref="input"
         :type="type"
+        :pattern="pattern"
         :autofocus="autofocus"
         :clicktofocus="clickToFocus"
         :value="value"
@@ -62,6 +63,9 @@ export default {
         [`${prefixCls}-label`]: true,
         [`${prefixCls}-label-5`]: true
       }
+    },
+    pattern () {
+      if (this.type === 'number') return '[0-9]*'
     }
   },
   watch: {
@@ -73,7 +77,8 @@ export default {
   },
   methods: {
     handleInput (event) {
-      this.$emit('input', event.target.value)
+      let value = event.target.value
+      this.$emit('input', value)
     },
     handleFocus (event) {
       this.$emit('focus', event)

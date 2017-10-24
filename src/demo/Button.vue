@@ -19,7 +19,10 @@
         <v-button class="btn" type="warning" disabled>warning disabled</v-button>
         <white-space size="sm"></white-space>
 
-        <v-button class="btn" loading>(icon) loading button</v-button>
+        <v-button class="btn" loading>loading button</v-button>
+        <white-space size="sm"></white-space>
+
+        <v-button class="btn" icon="check-circle-o">with icon</v-button>
         <white-space size="lg"></white-space>
 
         <v-button class="btn" type="primary" inline>inline primary</v-button>
