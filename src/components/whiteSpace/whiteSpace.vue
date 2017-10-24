@@ -1,16 +1,24 @@
 <template>
-  <div class="vm-whitespace"
-    :class="['vm-whitespace-' + size]"
-  ></div>
+  <div :class="wrapCls"></div>
 </template>
 
 <script>
+  const prefixCls = 'vm-whitespace'
+
   export default {
     name: 'VWhiteSpace',
     props: {
       size: {
         type: String,
         default: 'md'
+      }
+    },
+    data () {
+      return {
+        wrapCls: {
+          [prefixCls]: true,
+          [`${prefixCls}-${size}`]: true
+        }
       }
     }
   }
@@ -20,6 +28,7 @@
   @import '../../style/mixins';
 
   @whitespacePrefixCls: vm-whitespace;
+
   .@{whitespacePrefixCls} {
     &&-xs {
       height: @v-spacing-xs;

@@ -1,18 +1,26 @@
 <template>
-  <div class="vm-whiteblank"
-    :class="['vm-whiteblank-' + size]"
-  >
+  <div :class="wrapCls">
     <slot></slot>
   </div>
 </template>
 
 <script>
+  const prefixCls = 'vm-whiteblank'
+
   export default {
     name: 'WhiteBlank',
     props: {
       size: {
         type: String,
         default: 'lg'
+      }
+    },
+    data () {
+      return {
+        wrapCls: {
+          [prefixCls]: true,
+          [`${prefixCls}-${size}`]: true
+        }
       }
     }
   }
@@ -24,10 +32,9 @@
   @whitespacePrefixCls: vm-whiteblank;
 
   .@{whitespacePrefixCls} {
-
     &&-sm {
-    margin-left: @h-spacing-sm;
-    margin-right: @h-spacing-sm;
+      margin-left: @h-spacing-sm;
+      margin-right: @h-spacing-sm;
     }
 
     &&-md {
