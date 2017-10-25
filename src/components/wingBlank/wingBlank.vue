@@ -19,7 +19,7 @@
       return {
         wrapCls: {
           [prefixCls]: true,
-          [`${prefixCls}-${size}`]: true
+          [`${prefixCls}-${this.size}`]: true
         }
       }
     }
