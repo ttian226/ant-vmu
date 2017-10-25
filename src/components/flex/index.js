@@ -1,5 +1,5 @@
-import VFlex from './Flex'
-import VFlexItem from './FlexItem'
+import VFlex from './flex'
+import VFlexItem from './flexItem'
 
 VFlex.Item = VFlexItem
 

@@ -1,7 +1,7 @@
 <template>
-  <div :class="listCls">
-    <div :class="`${listCls}-header`" v-if="header">{{header}}</div>
-    <div :class="`${listCls}-body`">
+  <div :class="prefixCls">
+    <div :class="`${prefixCls}-header`" v-if="header">{{ header }}</div>
+    <div :class="`${prefixCls}-body`">
       <slot></slot>
     </div>
   </div>
@@ -11,45 +11,14 @@
 export default {
   name: 'VList',
   props: {
-    header: {
-      type: String,
-      default: ''
-    }
+    header: String
   },
   data () {
     return {
-      listCls: 'vm-list'
+      prefixCls: 'vm-list'
     }
   }
 }
 </script>
 
-<style lang="less">
-  @import '../../style/mixins';
-
-  @listPrefixCls: vm-list;
-
-  .@{listPrefixCls} {
-    &-header {
-      padding: @v-spacing-lg @h-spacing-lg @v-spacing-md @h-spacing-lg;
-      font-size: @font-size-base;
-      color: @color-text-caption;
-      display: inline-block;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    &-body {
-      position: relative;
-      background-color: @fill-base;
-      .hairline('top');
-      .hairline('bottom');
-
-      div:not(:last-child) {
-        .@{listPrefixCls}-line {
-          .hairline('bottom');
-        }
-      }
-    }
-  }
-</style>
+<style lang="less" src="./list.less"></style>
